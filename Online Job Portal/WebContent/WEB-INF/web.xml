@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Online Job Portal</display-name>
+  <servlet>
+    <servlet-name>Register_Employee1</servlet-name>
+    <servlet-class>employee.Register_Employee</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Register_Employee1</servlet-name>
+    <url-pattern>/register-employee</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>employee_login1</servlet-name>
+    <servlet-class>employee.employee_login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>employee_login1</servlet-name>
+    <url-pattern>/employee-login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>register_company</servlet-name>
+    <servlet-class>company.register_company</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>register_company</servlet-name>
+    <url-pattern>/register-company</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Company_Login</servlet-name>
+    <servlet-class>company.Company_Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Company_Login</servlet-name>
+    <url-pattern>/company-login</url-pattern>
+  </servlet-mapping>
+</web-app>
