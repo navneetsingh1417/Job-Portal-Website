@@ -16,7 +16,7 @@ public class Employee_Model {
 		boolean result=false;
 		
 		try {
-			PreparedStatement ps=con.prepareStatement("insert into register_employee values(?,?,?,?)");
+			PreparedStatement ps=con.prepareStatement("insert into register_employee(name,email,phone,password) values(?,?,?,?)");
 			ps.setString(1,eb.getName());
 			ps.setString(2,eb.getEmail());
 			ps.setString(3,eb.getPhone());
@@ -53,5 +53,12 @@ public class Employee_Model {
 		}
 		
 		return result;
+	}
+	
+	public boolean savingProfile() {
+		boolean res=false;
+		
+	//	PreparedStatement ps=con.prepareStatement("insert into ")
+		return res;
 	}
 }

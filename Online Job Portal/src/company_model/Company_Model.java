@@ -15,7 +15,7 @@ public class Company_Model {
 	{
 		boolean result=false;
 		try {
-			PreparedStatement ps=con.prepareStatement("insert into register_company values(?,?,?)");
+			PreparedStatement ps=con.prepareStatement("insert into register_company(company_name,username,password) values(?,?,?)");
 			ps.setString(1, cb.getCompany_name());
 			ps.setString(2, cb.getUser_name());
 			ps.setString(3, cb.getPassword());

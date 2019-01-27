@@ -26,7 +26,7 @@
       <li><a href="#">Search Jobs</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Post a Job</a></li>
+      <li><a href="set-company-profile.jsp"><span class="glyphicon glyphicon-user"></span> Set Company Profile</a></li>
       <li><a href="login.jsp"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
     </ul>
   </div>

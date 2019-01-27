@@ -33,4 +33,23 @@
     <servlet-name>Company_Login</servlet-name>
     <url-pattern>/company-login</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>edit_employee_profile</display-name>
+    <servlet-name>edit_employee_profile</servlet-name>
+    <servlet-class>employee.edit_employee_profile</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>edit_employee_profile</servlet-name>
+    <url-pattern>/edit_employee_profile</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>edit_employee_profile_set</servlet-name>
+    <servlet-class>employee.edit_employee_profile</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>edit_employee_profile_set</servlet-name>
+    <url-pattern>/edit-profile</url-pattern>
+  </servlet-mapping>
 </web-app>
