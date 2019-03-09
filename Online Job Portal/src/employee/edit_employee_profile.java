@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
+import employee_model.Employee_Model;
+
 
 @MultipartConfig(
 		maxFileSize= 1024*1024*5,
@@ -38,16 +40,18 @@ public class edit_employee_profile extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("hiii");
-		String fullname=request.getParameter("name");
-		String email=request.getParameter("email");
-		String phone=request.getParameter("phone");
-		String gender=request.getParameter("gender");
-		String dob=request.getParameter("dob");
-		String high_qualif=request.getParameter("high_qualif");
-		String marks_12=request.getParameter("marks_12");
-		String marks_10=request.getParameter("marks_10");
-		String field_of_interest=request.getParameter("field_of_interest");
+		//System.out.println("hiii");
+		Employee_Bean em=new Employee_Bean();
+		Employee_Model e = new Employee_Model();
+		//em.setFullname(request.getParameter("fullname"));
+		em.setEmail(request.getParameter("email"));
+		//em.setPhone(request.getParameter("phone"));
+		em.setGender(request.getParameter("gender"));
+		em.setDob(request.getParameter("dob"));
+		em.setHigh_qualif(request.getParameter("high_qualif"));
+		em.setMarks_12(request.getParameter("marks_12"));
+		em.setMarks_10(request.getParameter("marks_10"));
+		em.setField_of_interest(request.getParameter("field_of_interest"));
 		
 
 		String fileName="";
@@ -56,17 +60,27 @@ public class edit_employee_profile extends HttpServlet {
 		
 		 for (Part part : request.getParts()) {
 	  	      	 fileName = extractFileName(part);  
-	      	  
+	  	      	
 	          if(fileName!="flag") 
 	          {
-	        	 // System.out.println("suc.");
-	        	 System.out.println(fileName);
+//	        	  System.out.println("suc.");
+//	        	 System.out.println(fileName);
 	        	  part.write(fileSave + File.separator + fileName);
+	        		 em.setPhoto(fileName);
+	        		 System.out.println(fileName);
+//	        if(e.savingProfile(em)) {
+//	        		 }
 	          }  
 			
 		
 	      }
 		 
+		// em.setPhoto(fileName);
+		// System.out.println(em.getPhoto());
+		 
+		 if(e.savingProfile(em)) {
+			 response.sendRedirect("employee-profile.jsp");
+		 }
 	
 	}
 

@@ -9,9 +9,9 @@
 <body>
 <form action="edit-profile" method="post" enctype="multipart/form-data">
 Profile Photo<input type="file" name="profile_photo" ><br>
-Full Name<input type="text" name="name"><br>
+<!-- Full Name<input type="text" name="fullname"><br>
+Phone No.<input type="text" name="phone"><br> -->
 Email<input type="email" name="email"><br>
-Phone No.<input type="text" name="phone"><br>
 Gender<input type="radio" name="gender" value="male" checked> Male
 <input type="radio" name="gender" value="female"> Female
 <input type="radio" name="gender" value="other"> Other  <br>

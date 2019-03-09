@@ -27,7 +27,7 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="register-company.jsp"><span class="glyphicon glyphicon-user"></span> Register as a Company</a></li>
-      <li><a href="register-employee"><span class="glyphicon glyphicon-user"></span> Sign Up as an Employee</a></li>
+      <li><a href="register-employee.jsp"><span class="glyphicon glyphicon-user"></span> Sign Up as an Employee</a></li>
     </ul>
   </div>
 </nav>

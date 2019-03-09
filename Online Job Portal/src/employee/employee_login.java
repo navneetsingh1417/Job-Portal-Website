@@ -26,6 +26,7 @@ public class employee_login extends HttpServlet {
 		eb.setPassword(request.getParameter("user_password"));
 		
 		if(em.validate_employee(eb)) {
+			
 			RequestDispatcher rd=request.getRequestDispatcher("employee-profile.jsp");
 			rd.forward(request, response);
 		}

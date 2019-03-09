@@ -2,11 +2,11 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>Online Job Portal</display-name>
   <servlet>
-    <servlet-name>Register_Employee1</servlet-name>
+    <servlet-name>register-emp</servlet-name>
     <servlet-class>employee.Register_Employee</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Register_Employee1</servlet-name>
+    <servlet-name>register-emp</servlet-name>
     <url-pattern>/register-employee</url-pattern>
   </servlet-mapping>
   <servlet>
@@ -18,11 +18,11 @@
     <url-pattern>/employee-login</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>register_company</servlet-name>
+    <servlet-name>registerc</servlet-name>
     <servlet-class>company.register_company</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>register_company</servlet-name>
+    <servlet-name>registerc</servlet-name>
     <url-pattern>/register-company</url-pattern>
   </servlet-mapping>
   <servlet>
@@ -43,8 +43,7 @@
     <servlet-name>edit_employee_profile</servlet-name>
     <url-pattern>/edit_employee_profile</url-pattern>
   </servlet-mapping>
-  
-   <servlet>
+  <servlet>
     <servlet-name>edit_employee_profile_set</servlet-name>
     <servlet-class>employee.edit_employee_profile</servlet-class>
   </servlet>
@@ -52,4 +51,16 @@
     <servlet-name>edit_employee_profile_set</servlet-name>
     <url-pattern>/edit-profile</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>JobPost</display-name>
+    <servlet-name>JobPost</servlet-name>
+    <servlet-class>company.JobPost</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JobPost</servlet-name>
+    <url-pattern>/job-post</url-pattern>
+  </servlet-mapping>
+  
+  
 </web-app>

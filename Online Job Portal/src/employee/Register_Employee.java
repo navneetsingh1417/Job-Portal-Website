@@ -22,18 +22,15 @@ public class Register_Employee extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Employee_Model em= new Employee_Model();
-//		String name=request.getParameter("name");
-//		String email=request.getParameter("email");
-//		String phone=request.getParameter("phone");
-//		String password=request.getParameter("password");
+
 		Employee_Bean eb=new Employee_Bean();
-		eb.setName(request.getParameter("name"));
+		eb.setFullname(request.getParameter("name"));
 		eb.setEmail(request.getParameter("email"));
 		eb.setPhone(request.getParameter("phone"));
 		eb.setPassword(request.getParameter("password"));
 		PrintWriter out=response.getWriter();
 		if(em.register_employee(eb)){
-			RequestDispatcher rd=request.getRequestDispatcher("employee-profile.jsp");
+			RequestDispatcher rd=request.getRequestDispatcher("login.jsp");
 			rd.forward(request, response);
 		}
 		else {

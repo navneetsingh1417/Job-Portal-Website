@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,8 +33,8 @@
   </div>
 </nav>
 
-<h1>Welcome Company</h1>
+<h1>Welcome  ${sessionScope.company_name}</h1>
 
-
+<a href="JobPost.jsp">Post a Job</a>
 </body>
 </html>
