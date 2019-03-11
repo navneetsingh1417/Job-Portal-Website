@@ -39,5 +39,6 @@ Password   <input type="password" name="user_password"><br>
   
 <h1><a href="employee-login.jsp">Login as an Employee</a></h1><br>
 <h1><a href="company-login.jsp">Login as a Company</a></h1><br>
+<a href="admin-login.jsp">click here </a>	FOR ADMIN SECTION
 </body>
 </html>
