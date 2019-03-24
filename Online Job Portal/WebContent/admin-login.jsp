@@ -8,6 +8,8 @@
 </head>
 <body>
 <h1>welcome to admin section</h1>
-<a href="TotalJobs">click here</a>	TO SEE ALL JOBS POSTED
+<a href="TotalJobs">click here</a>	ALL JOBS<br>
+<a href="TotalEmployees">click here</a>	ALL EMPLOYEES<br>
+<a href="TotalCompanies">click here</a>	ALL COMPANIES<br>
 </body>
 </html>

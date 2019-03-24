@@ -62,13 +62,71 @@
     <url-pattern>/job-post</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description></description>
-    <display-name>TotalJobs</display-name>
-    <servlet-name>TotalJobs</servlet-name>
+    <servlet-name>TotalJob</servlet-name>
     <servlet-class>admin.TotalJobs</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>TotalJobs</servlet-name>
+    <servlet-name>TotalJob</servlet-name>
     <url-pattern>/TotalJobs</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TotalCompanies</display-name>
+    <servlet-name>TotalCompanies</servlet-name>
+    <servlet-class>admin.TotalCompanies</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TotalCompanies</servlet-name>
+    <url-pattern>/TotalCompanies</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TotalEmployees</display-name>
+    <servlet-name>TotalEmployees</servlet-name>
+    <servlet-class>admin.TotalEmployees</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TotalEmployees</servlet-name>
+    <url-pattern>/TotalEmployees</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Delete</display-name>
+    <servlet-name>Delete</servlet-name>
+    <servlet-class>admin.Delete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Delete</servlet-name>
+    <url-pattern>/Delete</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteJobs</display-name>
+    <servlet-name>DeleteJobs</servlet-name>
+    <servlet-class>admin.DeleteJobs</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteJobs</servlet-name>
+    <url-pattern>/DeleteJobs</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteEmployee</display-name>
+    <servlet-name>DeleteEmployee</servlet-name>
+    <servlet-class>admin.DeleteEmployee</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteEmployee</servlet-name>
+    <url-pattern>/DeleteEmployee</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteCompany</display-name>
+    <servlet-name>DeleteCompany</servlet-name>
+    <servlet-class>admin.DeleteCompany</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteCompany</servlet-name>
+    <url-pattern>/DeleteCompany</url-pattern>
   </servlet-mapping>
 </web-app>

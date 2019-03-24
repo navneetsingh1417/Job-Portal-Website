@@ -6,9 +6,9 @@ public class Company_Bean {
 	private String company_name;
 	private String user_name;
 	private String password;
-	
+	private int comp_id;
 	//   Job Post bean 
-	
+	private int jobid;;
 	private String jobname;
 	private String jobdesc;
 	private String eligibility;
@@ -16,6 +16,24 @@ public class Company_Bean {
 	private String jobcity;
 	private String jobstate;
 	private String jobcountry;
+	
+	
+	
+	
+	
+	
+	public int getComp_id() {
+		return comp_id;
+	}
+	public void setComp_id(int comp_id) {
+		this.comp_id = comp_id;
+	}
+	public int getJobid() {
+		return jobid;
+	}
+	public void setJobid(int jobid) {
+		this.jobid = jobid;
+	}
 	public String getJobcity() {
 		return jobcity;
 	}

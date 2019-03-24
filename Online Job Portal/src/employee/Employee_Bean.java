@@ -2,6 +2,8 @@ package employee;
 
 public class Employee_Bean {
 
+
+	private int eid;
 	private String email;
 	private String phone;
 	private String password;
@@ -15,6 +17,13 @@ public class Employee_Bean {
 	private String photo;
 	
 	
+
+	public int getEid() {
+		return eid;
+	}
+	public void setEid(int eid) {
+		this.eid = eid;
+	}
 	public String getFullname() {
 		return fullname;
 	}
