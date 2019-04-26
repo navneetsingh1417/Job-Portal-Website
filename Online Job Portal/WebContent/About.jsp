@@ -4,55 +4,32 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<title>Job Seeker</title>
+ <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-  input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-input[type=password], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
+<style>
 h1{
-text-align:center;
+	text-align:center;
+	font-family:Calibri;
+	font-size:40px;
+	background-color:#ffbfb2;
+	margin-left:20%;
+	margin-right:20%;
+	padding-top:40px;
+	padding-bottom:40px;
+	border-radius:20px;
 }
-
-.regform {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+p{
+background-color:#a7e5d8;
+padding:20px;
+border-radius:20px;
+font-size:20px;
+font-family:Calibri;
 }
-  </style>
-<title>Job Seeker</title>
+</style>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -62,7 +39,7 @@ text-align:center;
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="homepage.jsp">Home</a></li>
-      <li><a href="#">About</a></li>
+      <li><a href="About.jsp">About</a></li>
       <li><a href="#">Contact us</a></li>
       <li><a href="SearchJobs">Search Jobs</a></li>
     </ul>
@@ -73,18 +50,14 @@ text-align:center;
     </ul>
   </div>
 </nav>
-<h1>Employee Login</h1>
-<div class="regform">
-  <form action="employee-login" method="post">
-    <label for="user_email">Email</label>
-    <input type="text" id="user_email" name="user_email" placeholder="Email"><br>
+<h1><strong>About the website</strong></h1>
+<p><i>Online Job Portal is a web application built in Java. It provides the Candidate ability to register to this application and search for Jobs, manage their accounts. Each Candidate will have an account with their own home page.
 
-    <label for="user_password">Password</label>
-    <input type="password" id="user_password" name="user_password" placeholder="Password"><br>
-    
-    <input type="submit" value="Submit"><br>
-  </form>
-</div>
+	On the other hand, Organizations those who are willing to publish the Jobs for their Company and the Candidate can apply for the Job. And the Organization can select any individual based on their Profile. Registered Organizations can add or remove Jobs and these Jobs can be seen by various Candidates and they can contact the concern person for the job.
 
+Main aim of this web application is to make an User-Friendly Platform where applicants can search jobs easily and is accessible to everyone who are interested.
+
+	The Purpose of this website is to provide Job Portal to Job Seekers and where Organizations can select best Employees available.
+ </i></p>
 </body>
 </html>

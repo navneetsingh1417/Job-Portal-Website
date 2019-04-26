@@ -15,7 +15,7 @@ public class Employee_Bean {
 	private String marks_10;
 	private String field_of_interest;
 	private String photo;
-	
+	private String x;
 	
 
 	public int getEid() {

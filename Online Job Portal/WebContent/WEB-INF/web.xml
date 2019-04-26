@@ -129,4 +129,44 @@
     <servlet-name>DeleteCompany</servlet-name>
     <url-pattern>/DeleteCompany</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SearchJobs</display-name>
+    <servlet-name>SearchJobs</servlet-name>
+    <servlet-class>admin.SearchJobs</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchJobs</servlet-name>
+    <url-pattern>/SearchJobs</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ApplyJob</display-name>
+    <servlet-name>ApplyJob</servlet-name>
+    <servlet-class>admin.ApplyJob</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ApplyJob</servlet-name>
+    <url-pattern>/ApplyJob</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TotalParticularJobs</display-name>
+    <servlet-name>TotalParticularJobs</servlet-name>
+    <servlet-class>admin.TotalParticularJobs</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TotalParticularJobs</servlet-name>
+    <url-pattern>/TotalParticularJobs</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TotalJobsApplied</display-name>
+    <servlet-name>TotalJobsApplied</servlet-name>
+    <servlet-class>admin.TotalJobsApplied</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TotalJobsApplied</servlet-name>
+    <url-pattern>/TotalJobsApplied</url-pattern>
+  </servlet-mapping>
 </web-app>

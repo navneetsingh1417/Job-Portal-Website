@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import employee_model.Employee_Model;
 
@@ -22,9 +23,11 @@ public class employee_login extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Employee_Model em=new Employee_Model();
 		Employee_Bean eb=new Employee_Bean();
+		HttpSession ses = request.getSession();
+		ses.setAttribute("useremail", request.getParameter("user_email"));
 		eb.setEmail(request.getParameter("user_email"));
 		eb.setPassword(request.getParameter("user_password"));
-		
+		System.out.println("chalra haiii");
 		if(em.validate_employee(eb)) {
 			
 			RequestDispatcher rd=request.getRequestDispatcher("employee-profile.jsp");

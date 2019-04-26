@@ -17,15 +17,14 @@ public class AdminModels {
 	
 	public List<Company_Bean> getAllJobs(){
 		List<Company_Bean> li = new ArrayList<Company_Bean>();
-		
 		try {
 			PreparedStatement ps = con.prepareStatement("select * from job");
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
-			
 				Company_Bean cb = new Company_Bean();
 				cb.setJobname(rs.getString("jobname"));
 				cb.setCompany_name(rs.getString("companyname"));
+				cb.setSalary(rs.getString("salary"));
 				cb.setJobid(rs.getInt("idjob"));
 				li.add(cb);
 			}
@@ -124,5 +123,46 @@ public class AdminModels {
 		return isDeleted;
 	}
 	
-	
+	public List<Employee_Bean> getAllParticularJobs(String company_name){
+		List<Employee_Bean> li = new ArrayList<Employee_Bean>();
+		PreparedStatement ps;
+		try {
+			ps = con.prepareStatement("select * from appliedjobs where companyapplied=?");
+			ps.setString(1, company_name);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) {
+				Employee_Bean eb = new Employee_Bean();
+				eb.setFullname(rs.getString("name"));
+				eb.setEmail(rs.getString("email"));
+				eb.setField_of_interest(rs.getString("fieldofinterest"));
+				li.add(eb);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return li;
+	}
+	public List<Employee_Bean> getAllAppliedJobs(String company_name){
+		List<Employee_Bean> li = new ArrayList<Employee_Bean>();
+		PreparedStatement ps;
+		try {
+			ps = con.prepareStatement("select * from job where companyapplied=?");
+			ps.setString(1, company_name);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) {
+				Employee_Bean eb = new Employee_Bean();
+				eb.setFullname(rs.getString("name"));
+				eb.setEmail(rs.getString("email"));
+				eb.setField_of_interest(rs.getString("fieldofinterest"));
+				li.add(eb);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return li;
+	}
 }

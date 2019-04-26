@@ -29,10 +29,9 @@ public class JobPost extends HttpServlet {
 		cb.setJobstate(request.getParameter("jstate"));
 		cb.setJobcountry(request.getParameter("jcountry"));
 		cb.setExperience(request.getParameter("experience"));
-		String x = (String)ses.getAttribute("company_name");
-		cb.setCompany_name(x);
+		cb.setCompany_name(request.getParameter("compname"));
 		if(cm.postJob(cb)) {
-			RequestDispatcher rd = request.getRequestDispatcher("company-profile.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("After-Job-Post.jsp");
 			rd.forward(request, response);
 		}
 		
