@@ -5,9 +5,9 @@ public class Employee_Bean {
 
 	private int eid;
 	private String email;
-	private String phone;
 	private String password;
 	private String fullname;
+	private String phone;
 	private String gender;
 	private String dob;
 	private String high_qualif;

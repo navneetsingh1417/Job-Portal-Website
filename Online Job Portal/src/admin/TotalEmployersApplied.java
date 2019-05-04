@@ -15,27 +15,24 @@ import company.Company_Bean;
 import employee.Employee_Bean;
 
 /**
- * Servlet implementation class TotalParticularJobs
+ * Servlet implementation class TotalEmployersApplied
  */
-public class TotalParticularJobs extends HttpServlet {
+public class TotalEmployersApplied extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
 		AdminModels am = new AdminModels();
 		HttpSession ses = request.getSession();
 		String x = (String) ses.getAttribute("company_name");
-		List<Company_Bean> li = new ArrayList<Company_Bean>();
-		li = am.getAllParticularJobs(x);
-		ses.setAttribute("allpjobs", li);
-		for(Company_Bean i:li) {
-			System.out.println(i.getJobname()+" "+i.getSalary());
-		}
-		RequestDispatcher rd = request.getRequestDispatcher("TotalParticularJobs.jsp");
+		List<Employee_Bean> li = new ArrayList<Employee_Bean>();
+		li = am.getAllEmployersApplied(x);
+		ses.setAttribute("alleapp", li);
+		RequestDispatcher rd = request.getRequestDispatcher("TotalEmployersApplied.jsp");
 		rd.forward(request, response);
-			
 		
 	}
 

@@ -4,13 +4,10 @@
 <%@ page import="company.Company_Bean" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="admin.TotalParticularJobs" %>
+<%@ page import="admin.TotalEmployersApplied" %>
 <!DOCTYPE html>
 <html>
 <head>
-
-<meta charset="ISO-8859-1">
-<title>Total Particular Jobs</title>
 <style>
 .row{
 	padding-left: 50%;
@@ -49,6 +46,8 @@ table, td, th {
   font-size:30px;
 }
 </style>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
 </head>
 <body>
 <header>
@@ -62,10 +61,10 @@ table, td, th {
 			</ul>
 
 		</div>
-<table align="center" width="600">
-<tr><th>Job Name</th><th>Salary</th></tr>
-<c:forEach var="item" items="${sessionScope.allpjobs}">
-<tr><td><c:out value="${item.jobname}"></c:out></td><td><c:out value="${item.salary}"></c:out></td></tr>
+<table align="center" width="1000">
+<tr><th>Fullname</th><th>Email</th><th>Highest Qualifications</th><th>Field Of Interest</th></tr>
+<c:forEach var="item" items="${sessionScope.alleapp}">
+<tr><td><c:out value="${item.fullname}"></c:out></td><td><c:out value="${item.email}"></c:out></td><td><c:out value="${item.high_qualif}"></c:out></td><td><c:out value="${item.field_of_interest}"></c:out></td></tr>
 </c:forEach>
 </table>
 </header>

@@ -3,6 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="Register.css">
+<link rel="stylesheet" href="style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -58,7 +60,7 @@ text-align:center;
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<!-- 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -90,7 +92,7 @@ text-align:center;
     
     <input type="submit" value="Submit"><br>
   </form>
-</div>
+</div> -->
 <!-- 
 <form action="register-company" method="post">
 Company Name <input type="text" name="name"><br>
@@ -98,5 +100,53 @@ Company username<input type="text" name="user_name"><br>
 Set a Password<input type="text" name="password"><br>
 <input type="submit" value="Register">
 </form> -->
+
+		
+		<div class="row">
+			
+			<ul class="main-nav">
+				<li><a href="">HOME</a></li>
+				<li><a href="">SEARCH</a></li>
+				<li><a href="">ABOUT</a></li>
+				<li><a href="">CONTACT US</a></li>
+				<li><a href="">LOGIN</a></li>
+			</ul>
+
+		</div>
+
+
+
+<div class="login-page">	
+<div class="form">
+<form action="register-company" method="post" class="register-form">
+	<input type="text" placeholder="Company Name" name="name">
+	<input type="text" placeholder="username" name="user_name">
+	<input type="password" placeholder="password" name="password">
+	<button>Create</button>
+	<p class="message">Already Registered? 
+		<a href="#">Log in</a></p>
+</form>
+<form action="company-login" method="post" class="login-form">
+	<input type="text" name="user_name" placeholder="Email">
+	<input type="password" name="user_password" placeholder="Password">
+	<button>Log in</button>
+	<p class="message">Not Registered?
+		<a href="#">Register</a></p>
+</form>
+<script 
+src='https://code.jquery.com/jquery-3.2.1.min.js'>
+	
+</script>
+<script>
+	
+$('.message a').click(function(){
+	$('form').animate({
+		height:"toggle",
+		opacity:"toggle"},
+		"slow")
+});
+</script>
+</div>
+</div>
 </body>
 </html>

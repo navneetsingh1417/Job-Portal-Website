@@ -4,8 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link rel="stylesheet" href="style.css">
 <title>Job Seeker</title>
+<!--
 <style>
+
 	.container1{
 		background-color:#bff29d;
 		margin:0px;
@@ -46,13 +49,15 @@
 	
 	
 </style>
+-->
  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 </head>
 <body>
+<!-- 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -84,8 +89,30 @@
 	<h1><strong>Apply for Companies</strong></h1>
 	<h5><i>Do what you Love, Love what you do.</i></h5>
 	<a href="register-employee.jsp">Apply Now</a>
-</div>
+</div> -->
+<header>
+		
+		<div class="row">
+			
+			<ul class="main-nav">
+				<li><a href="homepage.jsp">HOME</a></li>
+				<li><a href="SearchJobs">SEARCH</a></li>
+				<li><a href="">ABOUT</a></li>
+				<li><a href="">CONTACT US</a></li>
+				<li><a href="login.jsp">LOGIN</a></li>
+			</ul>
 
-</body>
+		</div>
+
+		<div class="hero">
+			<h1><i>I' here for</i></h1>
+			<div class="button">
+				<a href="register-company.jsp" class="btn btn-one">for Hiring</a>
+				<a href="register-employee.jsp" class="btn btn-two">for a Job</a>
+			</div>
+		</div>
+
+
+	</header>
 </body>
 </html>

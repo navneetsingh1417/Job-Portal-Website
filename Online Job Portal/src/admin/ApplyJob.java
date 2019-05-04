@@ -30,9 +30,16 @@ public class ApplyJob extends HttpServlet {
 		Employee_Bean eb = new Employee_Bean();
 		HttpSession ses = request.getSession();
 		String email = (String)ses.getAttribute("useremail");
+		String fullname = (String)ses.getAttribute("userfullname");
+		
 		eb = em.getEmployeeDetails(email);
+		eb.setFullname(fullname);
+		String useremail = (String)ses.getAttribute("useremail");
+		eb.setEmail(useremail);
+		System.out.println(eb.getFullname());
+		System.out.println(eb.getEmail());
 		if(em.applyJob(eb, companyname)) {
-			out.println("job applied");
+			response.sendRedirect("employee-profile.jsp");
 		}
 		
 	}

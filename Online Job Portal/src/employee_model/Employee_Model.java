@@ -168,4 +168,16 @@ public class Employee_Model {
 		return isAdded;
 	}
 	
+
+public String getFName(String email) throws SQLException {
+	String res="";
+	PreparedStatement ps=con.prepareStatement("select fullname from register_employee where email=?");
+	ps.setString(1, email);
+	ResultSet rs=ps.executeQuery();
+	if(rs.next())
+		res = rs.getString("fullname");
+	
+	return res;
+}
+
 }

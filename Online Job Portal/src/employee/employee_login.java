@@ -1,6 +1,7 @@
 package employee;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -22,14 +23,22 @@ public class employee_login extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Employee_Model em=new Employee_Model();
+		String userfullname = null;
 		Employee_Bean eb=new Employee_Bean();
 		HttpSession ses = request.getSession();
 		ses.setAttribute("useremail", request.getParameter("user_email"));
-		eb.setEmail(request.getParameter("user_email"));
+		String email = request.getParameter("user_email");
+		eb.setEmail(email);
 		eb.setPassword(request.getParameter("user_password"));
-		System.out.println("chalra haiii");
+		
 		if(em.validate_employee(eb)) {
-			
+			try {
+				userfullname = em.getFName(email);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			ses.setAttribute("userfullname", userfullname);
 			RequestDispatcher rd=request.getRequestDispatcher("employee-profile.jsp");
 			rd.forward(request, response);
 		}

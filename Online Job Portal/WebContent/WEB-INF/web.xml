@@ -169,4 +169,24 @@
     <servlet-name>TotalJobsApplied</servlet-name>
     <url-pattern>/TotalJobsApplied</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TotalEmployersApplied</display-name>
+    <servlet-name>TotalEmployersApplied</servlet-name>
+    <servlet-class>admin.TotalEmployersApplied</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TotalEmployersApplied</servlet-name>
+    <url-pattern>/TotalEmployersApplied</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SearchFilter</display-name>
+    <servlet-name>SearchFilter</servlet-name>
+    <servlet-class>admin.SearchFilter</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchFilter</servlet-name>
+    <url-pattern>/SearchFilter</url-pattern>
+  </servlet-mapping>
 </web-app>

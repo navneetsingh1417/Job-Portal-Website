@@ -123,18 +123,17 @@ public class AdminModels {
 		return isDeleted;
 	}
 	
-	public List<Employee_Bean> getAllParticularJobs(String company_name){
-		List<Employee_Bean> li = new ArrayList<Employee_Bean>();
+	public List<Company_Bean> getAllParticularJobs(String company_name){
+		List<Company_Bean> li = new ArrayList<Company_Bean>();
 		PreparedStatement ps;
 		try {
-			ps = con.prepareStatement("select * from appliedjobs where companyapplied=?");
+			ps = con.prepareStatement("select * from job where companyname=?");
 			ps.setString(1, company_name);
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
-				Employee_Bean eb = new Employee_Bean();
-				eb.setFullname(rs.getString("name"));
-				eb.setEmail(rs.getString("email"));
-				eb.setField_of_interest(rs.getString("fieldofinterest"));
+				Company_Bean eb = new Company_Bean();
+				eb.setJobname(rs.getString("jobname"));
+				eb.setSalary(rs.getString("salary"));
 				li.add(eb);
 			}
 		} catch (SQLException e) {
@@ -163,6 +162,70 @@ public class AdminModels {
 			e.printStackTrace();
 		}
 		
+		return li;
+	}
+
+	public List<Employee_Bean> getAllEmployersApplied(String x) {
+		// TODO Auto-generated method stub
+		List<Employee_Bean> li = new ArrayList<Employee_Bean>();
+		PreparedStatement ps;
+		try {
+			ps = con.prepareStatement("select * from appliedjobs where companyapplied=?");
+			ps.setString(1, x);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) {
+				Employee_Bean eb = new Employee_Bean();
+				eb.setFullname(rs.getString("name"));
+				eb.setEmail(rs.getString("email"));
+				eb.setField_of_interest(rs.getString("fieldofinterest"));
+				eb.setHigh_qualif(rs.getString("highqualif"));
+				li.add(eb);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return li;
+	}
+	public List<Company_Bean> getFilteredJobsjobtitle(String jobname){
+		List<Company_Bean> li = new ArrayList<Company_Bean>();
+		try {
+			PreparedStatement ps = con.prepareStatement("select * from job where jobname=?");
+			ps.setString(1, jobname);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) {
+				Company_Bean cb = new Company_Bean();
+				cb.setJobname(rs.getString("jobname"));
+				cb.setCompany_name(rs.getString("companyname"));
+				cb.setSalary(rs.getString("salary"));
+				cb.setJobid(rs.getInt("idjob"));
+				li.add(cb);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return li;
+	}
+	public List<Company_Bean> getFilteredJobsstate(String state){
+		List<Company_Bean> li = new ArrayList<Company_Bean>();
+		try {
+			PreparedStatement ps = con.prepareStatement("select * from job where jobstate=?");
+			ps.setString(1, state);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) {
+				Company_Bean cb = new Company_Bean();
+				cb.setJobname(rs.getString("jobname"));
+				cb.setCompany_name(rs.getString("companyname"));
+				cb.setSalary(rs.getString("salary"));
+				cb.setJobid(rs.getInt("idjob"));
+				li.add(cb);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return li;
 	}
 }

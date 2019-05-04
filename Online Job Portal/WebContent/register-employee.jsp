@@ -3,6 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="Register.css">
+<link rel="stylesheet" href="style.css">
 <meta charset="ISO-8859-1">
 <title>Job Seeker</title>
  <meta charset="utf-8">
@@ -10,6 +12,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- 
   <style>
     input[type=text], select {
   width: 100%;
@@ -52,11 +55,11 @@ text-align:center;
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
-}
+}-->
   </style>
 </head>
 <body>
-
+<!--
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -70,14 +73,13 @@ text-align:center;
           <li><a href="#">Page 1-2</a></li>
           <li><a href="#">Page 1-3</a></li>
         </ul>
-      </li> -->
-      <li><a href="#">About</a></li>
+      </li>  href="#">About</a></li>
       <li><a href="#">Contact us</a></li>
       <li><a href="#">Search Jobs</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="register-company.jsp"><span class="glyphicon glyphicon-user"></span> Register as a Company</a></li>
-      <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up as an Employee</a></li> -->
+      <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up as an Employee</a></li> 
       <li><a href="login.jsp"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
   </div>
@@ -100,7 +102,7 @@ text-align:center;
     <input type="submit" value="Submit"><br>
   </form>
 </div>
-<!-- <form action="register-employee" method="post">
+ <form action="register-employee" method="post">
 Full Name  <input type="text" name="name"><br>
 Email      <input type="email" name="email"><br>
 Mobile No. <input type="text" name="phone"><br>
@@ -108,5 +110,55 @@ Password   <input type="password" name="password"><br>
 <input type="submit" value="Register"><br>
 </form> -->
 
+		
+		<div class="row">
+			
+			<ul class="main-nav">
+				<li><a href="">HOME</a></li>
+				<li><a href="">SEARCH</a></li>
+				<li><a href="">ABOUT</a></li>
+				<li><a href="">CONTACT US</a></li>
+				<li><a href="">LOGIN</a></li>
+			</ul>
+
+		</div>
+
+	
+
+
+
+<div class="login-page">	
+<div class="form">
+<form action="register-employee" method="post" class="register-form">
+	<input type="text" name="name" placeholder="name">
+	<input type="email" name="email" placeholder="email">
+	<input type="text" name="phone" placeholder="Phone NO">
+	<input type="password" placeholder="password" name="password">
+	<button>Create</button>
+	<p class="message">Already Registered? 
+		<a href="#">Log in</a></p>
+</form>
+<form action="employee-login" method="post" class="login-form">
+	<input type="text" name="user_email" placeholder="Email">
+	<input type="password" name="user_password" placeholder="Password">
+	<button>Log in</button>
+	<p class="message">Not Registered?
+		<a href="#">Register</a></p>
+</form>
+<script 
+src='https://code.jquery.com/jquery-3.2.1.min.js'>
+	
+</script>
+<script>
+	
+$('.message a').click(function(){
+	$('form').animate({
+		height:"toggle",
+		opacity:"toggle"},
+		"slow")
+});
+</script>
+</div>
+</div>
 </body>
 </html>
