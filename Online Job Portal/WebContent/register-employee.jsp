@@ -116,7 +116,7 @@ Password   <input type="password" name="password"><br>
 			<ul class="main-nav">
 				<li><a href="">HOME</a></li>
 				<li><a href="">SEARCH</a></li>
-				<li><a href="">ABOUT</a></li>
+				<li><a href="forget-password.jsp">FORGET PASSWORD</a></li>
 				<li><a href="">CONTACT US</a></li>
 				<li><a href="">LOGIN</a></li>
 			</ul>
@@ -139,7 +139,7 @@ Password   <input type="password" name="password"><br>
 		<a href="#">Log in</a></p>
 </form>
 <form action="employee-login" method="post" class="login-form">
-	<input type="text" name="user_email" placeholder="Email">
+	<input type="text" name="user_email" placeholder="username">
 	<input type="password" name="user_password" placeholder="Password">
 	<button>Log in</button>
 	<p class="message">Not Registered?

@@ -189,4 +189,34 @@
     <servlet-name>SearchFilter</servlet-name>
     <url-pattern>/SearchFilter</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CompanyForget</display-name>
+    <servlet-name>CompanyForget</servlet-name>
+    <servlet-class>admin.CompanyForget</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CompanyForget</servlet-name>
+    <url-pattern>/CompanyForget</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EmployeeForget</display-name>
+    <servlet-name>EmployeeForget</servlet-name>
+    <servlet-class>admin.EmployeeForget</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeForget</servlet-name>
+    <url-pattern>/EmployeeForget</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdminLogin</display-name>
+    <servlet-name>AdminLogin1</servlet-name>
+    <servlet-class>admin.AdminLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminLogin1</servlet-name>
+    <url-pattern>/AdminLog</url-pattern>
+  </servlet-mapping>
 </web-app>

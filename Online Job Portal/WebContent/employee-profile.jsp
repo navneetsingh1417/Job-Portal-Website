@@ -45,7 +45,7 @@
 </nav>
 <h1>Welcome user Please keep your profile up to date</h1>
 <div class="button">
-<a href="SearchJobs">Apply for Job</a>
+<a href="Search.jsp">Apply for Job</a>
 </div>
 </body>
 </html> 

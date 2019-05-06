@@ -228,4 +228,54 @@ public class AdminModels {
 		}
 		return li;
 	}
+	public boolean forgetCompany(String username, String password) {
+		boolean a=false;
+		try {
+			PreparedStatement ps = con.prepareStatement("update register_company set password=? where username=?");
+			ps.setString(1, password);
+			ps.setString(2, username);
+			int x = ps.executeUpdate();
+			if(x>0) {
+				a=true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return a;
+	}
+	public boolean forgetEmployee(String email, String password) {
+		boolean a=false;
+		try {
+			PreparedStatement ps = con.prepareStatement("update register_employee set password=? where email=?");
+			ps.setString(1, password);
+			ps.setString(2, email);
+			int x = ps.executeUpdate();
+			if(x>0) {
+				a=true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return a;
+	}
+	public boolean verifyAdmin(String username,String password) {
+		boolean isValid=false;
+		PreparedStatement ps;
+		try {
+			ps = con.prepareStatement("select * from admin where username=? and password=?");
+			ps.setString(1, username);
+			ps.setString(2, password);
+			ResultSet rs=ps.executeQuery();
+			if(rs.next()) {
+				isValid=true;
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+				return isValid;
+	}
 }
