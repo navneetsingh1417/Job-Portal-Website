@@ -9,7 +9,7 @@ public class MyConnection {
 	static {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			 con=DriverManager.getConnection("jdbc:mysql://localhost:3306/online_job_portal","root","");
+			 conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/online_job_portal","root","");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
