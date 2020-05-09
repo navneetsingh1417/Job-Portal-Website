@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 
 public class MyConnection {
 
-	private static Connection con;
+	private static Connection conn;
 	static {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -16,6 +16,6 @@ public class MyConnection {
 		}
 	}
 	public static Connection getConnection() {
-		return con;
+		return conn;
 	}
 }
